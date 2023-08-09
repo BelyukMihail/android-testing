@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite verbose="1" name="Carina Demo Tests - Attach File Sample" parallel="methods">
+
+    <test name="Attach File Test">
+        <classes>
+            <class name="com.solvd.carina.demo.chromebrowser.ChromeTest"/>
+        </classes>
+    </test>
+
+</suite>
