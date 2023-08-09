@@ -34,7 +34,7 @@ jobs:
       - name: Start Appium
         uses: appium/appium-android-driver@v1
         with:
-        args: --port 4723
+          args: --port 4723
 
       - name: run tests
         uses: reactivecircus/android-emulator-runner@v2
