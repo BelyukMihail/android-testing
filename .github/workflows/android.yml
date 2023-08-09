@@ -31,8 +31,10 @@ jobs:
       - name: checkout
         uses: actions/checkout@v3
 
-      - name: Start Appium
-        uses: moatazeldebsy/Appium-Server-GitHub-Action@V1.0.7
+      - name: Install and Run Appium Server
+        run: |
+          chmod +x ./scripts/RunAppiumServer.sh
+          ./scripts/RunAppiumServer.sh
 
       - name: run tests
         uses: reactivecircus/android-emulator-runner@v2
