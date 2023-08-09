@@ -16,14 +16,4 @@ import org.testng.annotations.BeforeTest;
 public class ChromeBaseTest implements IAbstractTest {
 
     protected Util util = new Util();
-//
-//    @BeforeClass
-//    public void beforeClass(){
-//        util.toHomeScreen();
-//    }
-//
-//    @AfterMethod
-//    public void afterTest(){
-//        util.toHomeScreen();
-//    }
 }
