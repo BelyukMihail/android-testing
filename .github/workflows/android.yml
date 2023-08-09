@@ -31,10 +31,10 @@ jobs:
       - name: checkout
         uses: actions/checkout@v3
 
-      - name: Install and Run Appium Server
-        run: |
-          chmod +x ./scripts/RunAppiumServer.sh
-          ./scripts/RunAppiumServer.sh
+      - name: Start Appium Server
+        uses: appium/appium-android-driver@v2.0
+        with:
+          args: --port 4723
 
       - name: run tests
         uses: reactivecircus/android-emulator-runner@v2
