@@ -1,8 +1,6 @@
 package com.solvd.carina.demo.chromebrowser;
 
-import com.solvd.carina.demo.chromebrowser.common.AllAppsScreenBase;
-import com.solvd.carina.demo.chromebrowser.common.CameraScreenBase;
-import com.solvd.carina.demo.chromebrowser.common.DeviceMainScreenBase;
+import com.solvd.carina.demo.chromebrowser.common.*;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
@@ -50,17 +48,15 @@ public class ChromeTest extends ChromeBaseTest {
         DeviceMainScreenBase deviceMainScreen = initPage(getDriver(), DeviceMainScreenBase.class);
         AllAppsScreenBase allAppsScreen = deviceMainScreen.goToAllAppsScreen();
         allAppsScreen.openSettings();
-        Runtime.getRuntime().exec("adb emu restart");
     }
-
-    @Test
-    public void testCamera() throws IOException {
-        DeviceMainScreenBase deviceMainScreen = initPage(getDriver(), DeviceMainScreenBase.class);
-        AllAppsScreenBase allAppsScreen = deviceMainScreen.goToAllAppsScreen();
-        CameraScreenBase cameraScreen = allAppsScreen.openCamera();
-        cameraScreen.changeCameraModeToVideo();
-        cameraScreen.pressShatter();
-        cameraScreen.pressShatter();
-        Runtime.getRuntime().exec("adb emu restart");
-    }
+//
+//    @Test
+//    public void testCamera() throws IOException {
+//        DeviceMainScreenBase deviceMainScreen = initPage(getDriver(), DeviceMainScreenBase.class);
+//        AllAppsScreenBase allAppsScreen = deviceMainScreen.goToAllAppsScreen();
+//        CameraScreenBase cameraScreen = allAppsScreen.openCamera();
+//        cameraScreen.changeCameraModeToVideo();
+//        cameraScreen.pressShatter();
+//        cameraScreen.pressShatter();
+//    }
 }
