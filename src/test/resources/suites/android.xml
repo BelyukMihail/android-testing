@@ -3,7 +3,7 @@
 
 	<test name="Mobile test">
 		<classes>
-			<class name="com.solvd.carina.demo.chromebrowser.ChromeTest" />
+			<class name="com.solvd.carina.demo.ChromeTest" />
 		</classes>
 	</test>
 
