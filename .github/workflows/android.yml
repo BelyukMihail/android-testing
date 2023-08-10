@@ -33,11 +33,12 @@ jobs:
 
       - name: Install Appium Server
         run: |
-         npm i --location=global appium
+          npm i --location=global appium
+          appium driver install uiautomator2
 
       - name: Run Appium Server
         run: |
-         appium &
+          appium &
 
       - name: run tests
         uses: reactivecircus/android-emulator-runner@v2
